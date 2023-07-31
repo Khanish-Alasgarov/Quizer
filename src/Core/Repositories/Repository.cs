@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Core.Extensions;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using System;
 using System.Collections.Generic;
@@ -27,9 +28,24 @@ namespace Core.Repositories
             return entity;
         }
 
-        public T Edit(T entity, EntityEntry<T> rules = null)
+        public T Edit(T entity, Action<EntityEntry<T>> rules = null)
         {
-            throw new NotImplementedException();
+            var entry = db.Entry<T>(entity);
+
+            if (rules == null)
+                goto summary;
+
+            foreach (var item in typeof(T).GetProperties().Where(m => m.IsEditable()))
+            {
+                entry.Property(item.Name).IsModified= false;
+
+            }
+            rules(entry);
+
+            summary:
+            entry.State = EntityState.Modified;
+
+            return entity;
         }
 
         public T Get(Expression<Func<T, bool>> expression = null)
