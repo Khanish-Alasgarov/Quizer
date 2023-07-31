@@ -38,7 +38,7 @@ namespace Core.Repositories
         }
         public IQueryable<T> GetAll(Expression<Func<T, bool>> expression = null)
         {
-            return _table.Where(expression!=null?expression:null).AsQueryable();
+            return _table.Where(expression != null ? expression : null).AsQueryable();
         }
 
         public void Remove(T entity)
@@ -48,8 +48,8 @@ namespace Core.Repositories
 
         public int Save()
         {
-            
-            returndb.SaveChanges();
+
+            return db.SaveChanges();
         }
     }
 }

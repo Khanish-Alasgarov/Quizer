@@ -1,8 +1,12 @@
-﻿namespace Models.Entities;
+﻿using Models.Common;
 
-public class Question
-{
-    public Guid Id { get; set; }
+namespace Models.Entities;
+
+public class Question : BaseEntity<Guid>
+{ 
     public string Text { get; set; }
     public Guid QuestionSetId { get; set; }
+    public QuestionSet QuestionSet { get; set; }
+    public List<Answer> Answers { get; set; }
+    public List<SessionContent> SessionContents { get; set; }
 }
