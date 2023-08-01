@@ -1,4 +1,4 @@
-﻿using Models.DTOs.QuestionSet.Create;
+﻿using Models.DTOs.QuestionSets.Create;
 
 namespace Core.Services;
 

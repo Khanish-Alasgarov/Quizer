@@ -1,0 +1,5 @@
+C:\Users\Asus\source\repos\Quizer\src\Application\obj\Debug\net7.0\Application.csproj.AssemblyReference.cache
+C:\Users\Asus\source\repos\Quizer\src\Application\obj\Debug\net7.0\Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Asus\source\repos\Quizer\src\Application\obj\Debug\net7.0\Application.AssemblyInfoInputs.cache
+C:\Users\Asus\source\repos\Quizer\src\Application\obj\Debug\net7.0\Application.AssemblyInfo.cs
+C:\Users\Asus\source\repos\Quizer\src\Application\obj\Debug\net7.0\Application.csproj.CoreCompileInputs.cache
