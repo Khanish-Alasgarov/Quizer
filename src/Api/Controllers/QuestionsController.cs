@@ -41,7 +41,7 @@ public class QuestionsController : BaseApiController
 
 
     [HttpGet("{id}")]
-    public IActionResult GetById([FromQuery] Guid id)
+    public IActionResult GetById(Guid id)
     {
         var response = _questionService.GetById(id);
         return Ok(response);

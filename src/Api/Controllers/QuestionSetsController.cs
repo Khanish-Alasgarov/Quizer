@@ -1,7 +1,7 @@
 ﻿using Core.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Models.DTOs.QuestionSet.Create;
+using Models.DTOs.QuestionSets.Create;
 
 namespace Api.Controllers
 {
@@ -13,7 +13,7 @@ namespace Api.Controllers
         {
             _questionSetService = questionSetService;
         }
-
+        [HttpPost]
         public IActionResult Create(QuestionSetCreateDto dto)
         {
             var response = _questionSetService.Create(dto);

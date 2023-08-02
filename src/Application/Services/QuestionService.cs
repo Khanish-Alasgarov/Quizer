@@ -55,25 +55,32 @@ public class QuestionService : IQuestionService
         _questionRepository.Edit(question, entry =>
         {
             entry.SetValue(m => m.Text, request.Text)
-            .SetValue(m => m.Point, request.Point)
-            .SetValue(m => m.QuestionSetId, request.QuestionSetId);
+                 .SetValue(m => m.Point, request.Point)
+                 .SetValue(m => m.QuestionSetId, request.QuestionSetId);
         });
 
-        var correctAnswer = _answerRepository.Get(m => m.Id == request.CorrectAnswerId);
-        _answerRepository.Edit(correctAnswer, entry => entry.SetValue(m => m.IsCorrect, true));
-        var otherAnswers = _answerRepository.GetAll(m => m.QuestionId == request.Id && m.Id != request.CorrectAnswerId).ToArray();
-        foreach (var item in otherAnswers)
+        var correctAnswer = _answerRepository.Get(m => m.Id == request.CorrectAnswerId,false);
+        if (correctAnswer!=null)
         {
-            _answerRepository.Edit(item, entry =>
+            _answerRepository.Edit(correctAnswer, entry => entry.SetValue(m => m.IsCorrect, true));
+
+            var otherAnswers = _answerRepository.GetAll(m => m.QuestionId == request.Id && m.Id != request.CorrectAnswerId).ToArray();
+
+            foreach (var item in otherAnswers)
             {
-                entry.SetValue(m => m.IsCorrect, false);
-            });
+                _answerRepository.Edit(item, entry =>
+                {
+                    entry.SetValue(m => m.IsCorrect, false);
+                });
+            } 
         }
+
+        
     }
 
     public QuestionSaveAnswerResponseDto SaveAnswer(QuestionSaveAnswerDto request)
     {
-        var answer = _answerRepository.Get(m => m.Id == request.Id);
+        var answer = _answerRepository.Get(m => m.Id == request.Id,false);
 
         if (answer == null)
         {

@@ -10,8 +10,8 @@ namespace Core.Repositories
 {
     public interface IRepository<T> where T : class,new()
     {
-        IQueryable<T> GetAll(Expression<Func<T, bool>> expression = null);
-        T Get(Expression<Func<T, bool>> expression = null);
+        IQueryable<T> GetAll(Expression<Func<T, bool>> expression = null, bool throwException = true);
+        T Get(Expression<Func<T, bool>> expression = null, bool throwException = true);
         T Edit(T entity, Action<EntityEntry<T>> rules = null);
         void Remove(T entity);
         T Add(T entity);

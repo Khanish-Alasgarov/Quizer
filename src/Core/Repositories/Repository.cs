@@ -1,4 +1,5 @@
-﻿using Core.Extensions;
+﻿using Core.Exceptions;
+using Core.Extensions;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using System;
@@ -38,8 +39,8 @@ namespace Core.Repositories
             foreach (var item in typeof(T).GetProperties().Where(m => m.IsEditable()))
             {
                 entry.Property(item.Name).IsModified= false;
-
             }
+
             rules(entry);
 
             summary:
@@ -48,11 +49,25 @@ namespace Core.Repositories
             return entity;
         }
 
-        public T Get(Expression<Func<T, bool>> expression = null)
+        public T Get(Expression<Func<T, bool>> expression = null, bool throwException = true)
         {
-            return _table.FirstOrDefault(expression != null ? expression : null);
+
+            //return _table.FirstOrDefault(expression??) ?? throw new NotFoundException();
+ 
+            var query = _table.AsQueryable();
+
+            if (expression != null)
+                query = query.Where(expression);
+
+            var entity = query.FirstOrDefault();
+
+            if (entity == null && throwException)
+                throw new NotFoundException("Qeyd tapılmadı");
+
+            return entity;
+
         }
-        public IQueryable<T> GetAll(Expression<Func<T, bool>> expression = null)
+        public IQueryable<T> GetAll(Expression<Func<T, bool>> expression = null,bool throwException =true)
         {
             return _table.Where(expression != null ? expression : null).AsQueryable();
         }
