@@ -21,7 +21,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Models", "src\Models\Models
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api", "src\Api\Api.csproj", "{77D1EB43-3D0D-4F04-B494-D8331C8271E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "src\Application\Application.csproj", "{FDB2A3AB-0A48-45DC-A32B-916FB3437EDF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "src\Application\Application.csproj", "{FDB2A3AB-0A48-45DC-A32B-916FB3437EDF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "src\DataAccess\DataAccess.csproj", "{61DB4B67-6454-462A-B777-5C94104EE541}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{FDB2A3AB-0A48-45DC-A32B-916FB3437EDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FDB2A3AB-0A48-45DC-A32B-916FB3437EDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FDB2A3AB-0A48-45DC-A32B-916FB3437EDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61DB4B67-6454-462A-B777-5C94104EE541}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61DB4B67-6454-462A-B777-5C94104EE541}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61DB4B67-6454-462A-B777-5C94104EE541}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61DB4B67-6454-462A-B777-5C94104EE541}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -58,6 +64,7 @@ Global
 		{ED1FD57F-40BA-461E-9B32-8D9411292427} = {485836E5-09CB-42E2-A6C5-29F1F5156AB7}
 		{77D1EB43-3D0D-4F04-B494-D8331C8271E9} = {1D4FA687-D722-4804-9199-064B4350E181}
 		{FDB2A3AB-0A48-45DC-A32B-916FB3437EDF} = {737D8191-20C9-4871-B536-E45E0AB4BA36}
+		{61DB4B67-6454-462A-B777-5C94104EE541} = {F492B338-DCB7-442B-B996-E00EA0C0ADD1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D68870F3-4F58-4B57-90D1-DD0FE1F22D37}

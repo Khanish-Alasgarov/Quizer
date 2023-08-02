@@ -8,5 +8,5 @@ public class Session : BaseEntity<Guid>
     public DateTime CreatedDate { get; set; }
     public Guid QuestionSetId { get; set; }
     public QuestionSet QuestionSet { get; set; }
-    public List<SessionContent> SessionContent { get; set; }
+    public List<SessionContent> SessionContents { get; set; }
 }
