@@ -13,3 +13,5 @@ C:\Users\Asus\source\repos\Quizer\src\DataAccess\obj\Debug\net7.0\DataAccess.dll
 C:\Users\Asus\source\repos\Quizer\src\DataAccess\obj\Debug\net7.0\refint\DataAccess.dll
 C:\Users\Asus\source\repos\Quizer\src\DataAccess\obj\Debug\net7.0\DataAccess.pdb
 C:\Users\Asus\source\repos\Quizer\src\DataAccess\obj\Debug\net7.0\ref\DataAccess.dll
+C:\Users\Asus\source\repos\Quizer\src\DataAccess\bin\Debug\net7.0\Core.dll
+C:\Users\Asus\source\repos\Quizer\src\DataAccess\bin\Debug\net7.0\Core.pdb

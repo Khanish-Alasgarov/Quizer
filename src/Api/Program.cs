@@ -1,5 +1,6 @@
 
 using Api.Middlewares;
+using Application;
 using Newtonsoft.Json;
 
 namespace Api
@@ -14,6 +15,7 @@ namespace Api
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+            builder.Services.AddBusinessLogic(builder.Configuration);
 
             var app = builder.Build();
 

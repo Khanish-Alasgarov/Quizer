@@ -10,8 +10,8 @@ public class Context:DbContext
     }
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        base.OnConfiguring(optionsBuilder);
-        optionsBuilder.UseSqlServer("data source=DESKTOP-RI3B8A7;initial catalog=Quizer;user id=Khanish;password=15101995;TrustServerCertificate=True");
+        base.OnConfiguring(optionsBuilder); 
+        optionsBuilder.UseSqlServer("data source=DESKTOP-RI3B8A7;initial catalog=Quizer;user id = sa; password = 15101995;TrustServerCertificate=True");
 
     }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
