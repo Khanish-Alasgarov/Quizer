@@ -3,6 +3,7 @@
 using Application.Services;
 using Core.Services;
 using DataAccess;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -18,5 +19,11 @@ public static class BusinessLogicInjection
         #endregion
         services.AddDataAccess(configuration);
         return services;
+    }
+    public static IApplicationBuilder UseBusinessLogic(this IApplicationBuilder app)
+    {
+        //app.UseDataAccess();
+        //return app;
+        return app.UseDataAccess();
     }
 }

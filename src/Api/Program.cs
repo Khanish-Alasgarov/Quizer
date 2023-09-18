@@ -1,5 +1,5 @@
 
-using Api.Middlewares;
+using Api.PipelineElements;
 using Application;
 using Newtonsoft.Json;
 
@@ -29,13 +29,18 @@ namespace Api
 
             app.UseAuthorization();
 
-
             app.MapControllers();
+
             //if (!app.Environment.IsDevelopment())
             //{
             //    app.AddGlobalErrorhandling();
             //}
-            app.AddGlobalErrorhandling();
+            app.UseGlobalErrorhandling();
+            
+            app.UseDbTransaction();
+
+            app.UseBusinessLogic();
+
             app.Run();
         }
     }

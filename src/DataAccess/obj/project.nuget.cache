@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "lPTa9kl9cfIu/+WyaHqL6dZNB5CsYiHkuKpgD9iw+YmOn1myRMp1ERCN5xH2G/VLBbsHpN9nuuxakic62iUfvQ==",
+  "dgSpecHash": "Kw2A3Eu9S+YLm4bDJM5xpbE385dGW44ya101b1r1RTMZ94SJq9RB0si4FTGnIKo2yvpH3c64lodBAn9N1+HDKw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Asus\\source\\repos\\Quizer\\src\\DataAccess\\DataAccess.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Asus\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
+    "C:\\Users\\Asus\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
+    "C:\\Users\\Asus\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\microsoft.data.sqlclient\\5.0.2\\microsoft.data.sqlclient.5.0.2.nupkg.sha512",

@@ -1,6 +1,7 @@
 ﻿using Core.Repositories.Special;
 using DataAccess.Persistence;
 using DataAccess.Repositories;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -21,6 +22,11 @@ namespace DataAccess
             services.AddScoped<ISubscriberRepository, SubscriberRepository>();
             #endregion
             return services;
+        }
+        public static IApplicationBuilder UseDataAccess(this IApplicationBuilder app)
+        {
+            app.UseAutoMigration();
+            return app;
         }
     }
 }

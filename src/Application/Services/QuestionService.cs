@@ -24,6 +24,7 @@ public class QuestionService : IQuestionService
     {
         var response = _questionRepository.Add(request.ToEntity());
 
+        _questionRepository.Save();
         return QuestionCreateResponseDto.Create(response);
     }
 

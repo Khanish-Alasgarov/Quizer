@@ -11,7 +11,7 @@ public class Context:DbContext
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         base.OnConfiguring(optionsBuilder); 
-        optionsBuilder.UseSqlServer("data source=DESKTOP-RI3B8A7;initial catalog=Quizer;user id = sa; password = 15101995;TrustServerCertificate=True");
+        optionsBuilder.UseSqlServer("data source=(localdb)\\MSSQLLocalDB;initial catalog=Quizer;integrated security=true");
 
     }
     protected override void OnModelCreating(ModelBuilder modelBuilder)

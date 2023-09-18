@@ -1,4 +1,5 @@
-﻿using Core.Extensions;
+﻿using Core.Attributes;
+using Core.Extensions;
 using Core.Repositories;
 using Core.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -24,6 +25,7 @@ public class QuestionsController : BaseApiController
         return Ok(response);
     }
     [HttpPost]
+    [Transaction]
     public IActionResult Save(QuestionSaveDto dto)
     {
         _questionService.Save(dto);

@@ -1,12 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "0W4ALivhlJFUYy3c9h+QMUDsIYaJdaELZct5zNvRzxJUkmX0/vcycPeTl579hP7zGljgUBIOIzhwPy36+N1zFA==",
+  "dgSpecHash": "X2DrsBk7hZe1ChRjh8uUZ5ioWKH9DW2OeilS0oxkgH2l+7Mona0Xdee9f/hgfYPBO0gMM4COdBz+eDlquFTBSw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Asus\\source\\repos\\Quizer\\src\\Api\\Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Asus\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\Asus\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
+    "C:\\Users\\Asus\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\7.0.9\\microsoft.aspnetcore.jsonpatch.7.0.9.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\7.0.9\\microsoft.aspnetcore.mvc.newtonsoftjson.7.0.9.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.0\\microsoft.aspnetcore.openapi.7.0.0.nupkg.sha512",

@@ -5,7 +5,7 @@ using Newtonsoft.Json.Serialization;
 using System.Net;
 using System.Text.Json;
 
-namespace Api.Middlewares;
+namespace Api.PipelineElements;
 
 public class GlobalErrorHandlingMiddleware
 {
@@ -58,7 +58,7 @@ public class GlobalErrorHandlingMiddleware
 
 internal static class GlobalErrorHandlingMilldewareExtension
 {
-    internal static IApplicationBuilder AddGlobalErrorhandling(this IApplicationBuilder builder)
+    internal static IApplicationBuilder UseGlobalErrorhandling(this IApplicationBuilder builder)
     {
 
         builder.UseMiddleware<GlobalErrorHandlingMiddleware>();

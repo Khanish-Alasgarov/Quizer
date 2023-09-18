@@ -9,4 +9,5 @@ public class Answer: BaseEntity<Guid>
     public Guid QuestionId { get; set; }
     public Question Question { get; set; }
     public List<SessionContent> SessionContents { get; set; }
+ 
 }
