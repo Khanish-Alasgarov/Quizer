@@ -1,6 +1,8 @@
 
 using Api.PipelineElements;
 using Application;
+using FluentValidation;
+using FluentValidation.AspNetCore;
 using Newtonsoft.Json;
 
 namespace Api
@@ -16,6 +18,15 @@ namespace Api
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
             builder.Services.AddBusinessLogic(builder.Configuration);
+
+            builder.Services.AddValidatorsFromAssemblyContaining<IValidatorReferance>(includeInternalTypes: true);
+
+            builder.Services.AddFluentValidationAutoValidation(cfg =>
+            {
+                cfg.DisableDataAnnotationsValidation = true;
+            });
+
+            builder.Services.AddFluentValidation();
 
             var app = builder.Build();
 
@@ -36,7 +47,7 @@ namespace Api
             //    app.AddGlobalErrorhandling();
             //}
             app.UseGlobalErrorhandling();
-            
+
             app.UseDbTransaction();
 
             app.UseBusinessLogic();

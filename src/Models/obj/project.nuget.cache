@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "k1aErzWKkWTRFwIZp6mVYI0JqXprZFPX8jtJC6L8+5gbGIyNduE9Dkwo8ConKq+79Kfan6X34kwuQGakx2AAnA==",
+  "dgSpecHash": "TSGPpEEPaQJQp0FWUBbIMV2SdQLm+3rMxrb/NURY/K4aDfv02KgBISe0skVRkPLYbv+vD1u+H/TQJ7OteLONIQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Asus\\source\\repos\\Quizer\\src\\Models\\Models.csproj",
+  "projectFilePath": "C:\\Users\\alesk\\source\\repos\\QuizApp\\src\\Models\\Models.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

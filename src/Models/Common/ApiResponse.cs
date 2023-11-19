@@ -7,7 +7,7 @@ public class ApiResponse
     public HttpStatusCode StatusCode { get; set; }
     public string Message { get; set; }
     public bool IsSuccess { get; set; }
-    public Dictionary<string, string> Errors { get; set; }
+    public Dictionary<string, string[]> Errors { get; set; }
 
     public static ApiResponse Success(string message = null, HttpStatusCode statusCode = HttpStatusCode.OK)
     {
@@ -41,7 +41,7 @@ public class ApiResponse
             IsSuccess = false
         };
     }
-    public static ApiResponse Fail(Dictionary<string, string> errors, string message = null, HttpStatusCode statusCode = HttpStatusCode.BadRequest)
+    public static ApiResponse Fail(Dictionary<string, string[]> errors, string message = null, HttpStatusCode statusCode = HttpStatusCode.BadRequest)
     {
         return new ApiResponse
         {
