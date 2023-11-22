@@ -180,3 +180,5 @@ C:\Users\alesk\source\repos\QuizApp\src\Api\obj\Debug\net7.0\refint\Api.dll
 C:\Users\alesk\source\repos\QuizApp\src\Api\obj\Debug\net7.0\Api.pdb
 C:\Users\alesk\source\repos\QuizApp\src\Api\obj\Debug\net7.0\Api.genruntimeconfig.cache
 C:\Users\alesk\source\repos\QuizApp\src\Api\obj\Debug\net7.0\ref\Api.dll
+C:\Users\alesk\source\repos\QuizApp\src\Api\bin\Debug\net7.0\Swashbuckle.AspNetCore.Annotations.dll
+C:\Users\alesk\source\repos\QuizApp\src\Api\bin\Debug\net7.0\System.Linq.Dynamic.Core.dll

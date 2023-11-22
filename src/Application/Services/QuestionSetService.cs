@@ -1,6 +1,6 @@
 ﻿using Core.Repositories.Special;
 using Core.Services;
-
+using Models.DTOs.QuestionSets;
 using Models.DTOs.QuestionSets.Create;
 using Models.Entities;
 
@@ -22,5 +22,14 @@ public class QuestionSetService : IQuestionSetService
 
         _questionSetRepository.Save();
         return QuestionSetCreateResponseDto.Create(response);
+    }
+
+    public IEnumerable<QuestionSetResponseDto> GetAll()
+    {
+        return _questionSetRepository.GetAll().Select(x => new QuestionSetResponseDto
+        {
+            Id = x.Id,
+            Subject = x.Subject,
+        }).AsEnumerable();
     }
 }

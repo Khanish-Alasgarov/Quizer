@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "GAV7F1FL8aQ50msnggIDTZB7DodunLz+Trp1FiW5rswfVKwwHYxsYpALZdRJMVBlekK+ndj5rCyHOWN+RrDl+g==",
+  "dgSpecHash": "ZzmX5t+rNI9S1Ddx/VlfyNdZC3WTsQM/2qFxEwLn1VskQhz4Z8y2dXxnYYZ2KzwmUtOc5e2kjur+APgRVCJJLQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\alesk\\source\\repos\\QuizApp\\src\\Application\\Application.csproj",
   "expectedPackageFiles": [
@@ -48,6 +48,7 @@
     "C:\\Users\\alesk\\.nuget\\packages\\system.globalization\\4.3.0\\system.globalization.4.3.0.nupkg.sha512",
     "C:\\Users\\alesk\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.21.0\\system.identitymodel.tokens.jwt.6.21.0.nupkg.sha512",
     "C:\\Users\\alesk\\.nuget\\packages\\system.io\\4.3.0\\system.io.4.3.0.nupkg.sha512",
+    "C:\\Users\\alesk\\.nuget\\packages\\system.linq.dynamic.core\\1.3.7\\system.linq.dynamic.core.1.3.7.nupkg.sha512",
     "C:\\Users\\alesk\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
     "C:\\Users\\alesk\\.nuget\\packages\\system.memory.data\\1.0.2\\system.memory.data.1.0.2.nupkg.sha512",
     "C:\\Users\\alesk\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",

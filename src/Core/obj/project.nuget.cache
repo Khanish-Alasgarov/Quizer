@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "x9/fJxttJJDi6yqc7zpSXNGxh1S9HSEh051aQC/819mjHDbGEi2JWuvbLc/Yck6lOZE9mRGosN+5SfbDCFTKxQ==",
+  "dgSpecHash": "LyLfctMvGD6m6aKIvJZAiMV7w4DSr0K8+0wOZtc0jZIeJoNJiv656l07UMKzbLtYtXC1L3GXnk02TByFfOwrdQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\alesk\\source\\repos\\QuizApp\\src\\Core\\Core.csproj",
   "expectedPackageFiles": [
@@ -14,7 +14,8 @@
     "C:\\Users\\alesk\\.nuget\\packages\\microsoft.extensions.logging\\7.0.0\\microsoft.extensions.logging.7.0.0.nupkg.sha512",
     "C:\\Users\\alesk\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\microsoft.extensions.logging.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\alesk\\.nuget\\packages\\microsoft.extensions.options\\7.0.0\\microsoft.extensions.options.7.0.0.nupkg.sha512",
-    "C:\\Users\\alesk\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512"
+    "C:\\Users\\alesk\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
+    "C:\\Users\\alesk\\.nuget\\packages\\system.linq.dynamic.core\\1.3.7\\system.linq.dynamic.core.1.3.7.nupkg.sha512"
   ],
   "logs": []
 }
