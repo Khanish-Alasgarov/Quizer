@@ -33,8 +33,8 @@ public class GlobalErrorHandlingMiddleware
                 case UnhandledException:
 
                     break;
-                case BadRequestException:
-                    response = ApiResponse.Fail(ex.Message, HttpStatusCode.BadRequest);
+                case BadRequestException br:
+                    response = ApiResponse.Fail(br.Errors, ex.Message, HttpStatusCode.BadRequest);
                     break;
                 default:
                     response = ApiResponse.Fail("Xəta baş verdi! Biraz sonra yeniden yoxlayın!!!", HttpStatusCode.InternalServerError);

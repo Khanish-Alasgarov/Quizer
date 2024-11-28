@@ -1,10 +1,13 @@
 ﻿using Core.Extensions;
 using Core.Repositories.Special;
 using Core.Services;
+using Models.Common.Paging;
 using Models.DTOs.Questions.Create;
+using Models.DTOs.Questions.GetAll;
 using Models.DTOs.Questions.GetById;
 using Models.DTOs.Questions.Save;
 using Models.DTOs.Questions.SaveAnswer;
+using Models.DTOs.Questions.Search;
 using Models.Entities;
 
 namespace Application.Services;
@@ -13,11 +16,13 @@ public class QuestionService : IQuestionService
 {
     private readonly IQuestionRepository _questionRepository;
     private readonly IAnswerRepository _answerRepository;
+    private readonly IQuestionSetRepository _questionSetRepository;
 
-    public QuestionService(IQuestionRepository questionRepository, IAnswerRepository answerRepository)
+    public QuestionService(IQuestionRepository questionRepository, IAnswerRepository answerRepository, IQuestionSetRepository questionSetRepository)
     {
         _questionRepository = questionRepository;
         _answerRepository = answerRepository;
+        _questionSetRepository = questionSetRepository;
     }
 
     public QuestionCreateResponseDto Create(QuestionCreateDto request)
@@ -28,9 +33,22 @@ public class QuestionService : IQuestionService
         return QuestionCreateResponseDto.Create(response);
     }
 
+    public List<QuestionResponseDto> GetAll()
+    {
+
+        return _questionRepository.GetAll().Select(x => new QuestionResponseDto
+        {
+            Id = x.Id,
+            Point = x.Point,
+            Text = x.Text,
+            QuestionSetId = x.QuestionSetId,
+        }).ToList();
+    }
+
     public QuestionGetByIdResponseDto GetById(Guid Id)
     {
         var response = _questionRepository.Get(x => x.Id == Id);
+        response.Answers = _answerRepository.GetAll(x => x.QuestionId == Id).ToList();
 
         return QuestionGetByIdResponseDto.Create(response);
 
@@ -42,6 +60,13 @@ public class QuestionService : IQuestionService
         var response = _questionRepository.Get(x => x.Id == Id);
 
         _questionRepository.Remove(response);
+        var answers = _answerRepository.GetAll(x => x.QuestionId == Id);
+
+        foreach (var item in answers)
+        {
+            _answerRepository.Remove(item);
+        }
+
         _questionRepository.Save();
     }
 
@@ -53,6 +78,9 @@ public class QuestionService : IQuestionService
     public void Save(QuestionSaveDto request)
     {
         var question = _questionRepository.Get(x => x.Id == request.Id);
+
+        _questionSetRepository.Get(x => x.Id == request.QuestionSetId);
+
         _questionRepository.Edit(question, entry =>
         {
             entry.SetValue(m => m.Text, request.Text)
@@ -60,8 +88,16 @@ public class QuestionService : IQuestionService
                  .SetValue(m => m.QuestionSetId, request.QuestionSetId);
         });
 
-        var correctAnswer = _answerRepository.Get(m => m.Id == request.CorrectAnswerId,false);
-        if (correctAnswer!=null)
+
+
+        if (request.CorrectAnswerId == null)
+            goto end;
+
+
+
+
+        var correctAnswer = _answerRepository.Get(m => m.Id == request.CorrectAnswerId, false);
+        if (correctAnswer != null)
         {
             _answerRepository.Edit(correctAnswer, entry => entry.SetValue(m => m.IsCorrect, true));
 
@@ -73,15 +109,17 @@ public class QuestionService : IQuestionService
                 {
                     entry.SetValue(m => m.IsCorrect, false);
                 });
-            } 
+            }
         }
+    end:
+        _questionRepository.Save();
 
-        
+
     }
 
     public QuestionSaveAnswerResponseDto SaveAnswer(QuestionSaveAnswerDto request)
     {
-        var answer = _answerRepository.Get(m => m.Id == request.Id,false);
+        var answer = request.Id == null ? null : _answerRepository.Get(m => m.Id == request.Id, false);
 
         if (answer == null)
         {
@@ -123,5 +161,10 @@ public class QuestionService : IQuestionService
 
         return QuestionSaveAnswerResponseDto.Create(answer);
 
+    }
+
+    public IPaginate Search(QuestionSearchDto searchDto)
+    {
+        return _questionRepository.GetAll().OrderBy(m => m.Id).ToPaginate(searchDto);
     }
 }

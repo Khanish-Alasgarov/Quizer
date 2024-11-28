@@ -62,14 +62,19 @@ namespace Core.Repositories
             var entity = query.FirstOrDefault();
 
             if (entity == null && throwException)
-                throw new NotFoundException("Qeyd tapılmadı");
+                throw new NotFoundException($"{typeof(T).Name}: Qeyd tapılmadı");
 
             return entity;
 
         }
         public IQueryable<T> GetAll(Expression<Func<T, bool>> expression = null,bool throwException =true)
         {
-            return _table.Where(expression != null ? expression : null).AsQueryable();
+            if (expression!=null)
+            {
+                return _table.Where(expression).AsQueryable(); 
+            }
+            return _table.AsQueryable();
+            
         }
 
         public void Remove(T entity)
@@ -79,7 +84,6 @@ namespace Core.Repositories
 
         public int Save()
         {
-
             return db.SaveChanges();
         }
     }

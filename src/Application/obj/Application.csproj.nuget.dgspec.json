@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Asus\\source\\repos\\Quizer\\src\\Application\\Application.csproj": {}
+    "C:\\Users\\alesk\\source\\repos\\QuizApp\\src\\Application\\Application.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Asus\\source\\repos\\Quizer\\src\\Application\\Application.csproj": {
+    "C:\\Users\\alesk\\source\\repos\\QuizApp\\src\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Asus\\source\\repos\\Quizer\\src\\Application\\Application.csproj",
+        "projectUniqueName": "C:\\Users\\alesk\\source\\repos\\QuizApp\\src\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "C:\\Users\\Asus\\source\\repos\\Quizer\\src\\Application\\Application.csproj",
-        "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Asus\\source\\repos\\Quizer\\src\\Application\\obj\\",
+        "projectPath": "C:\\Users\\alesk\\source\\repos\\QuizApp\\src\\Application\\Application.csproj",
+        "packagesPath": "C:\\Users\\alesk\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\alesk\\source\\repos\\QuizApp\\src\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\alesk\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Asus\\source\\repos\\Quizer\\src\\DataAccess\\DataAccess.csproj": {
-                "projectPath": "C:\\Users\\Asus\\source\\repos\\Quizer\\src\\DataAccess\\DataAccess.csproj"
+              "C:\\Users\\alesk\\source\\repos\\QuizApp\\src\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "C:\\Users\\alesk\\source\\repos\\QuizApp\\src\\DataAccess\\DataAccess.csproj"
               }
             }
           }
@@ -43,6 +43,12 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.8.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -59,21 +65,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Asus\\source\\repos\\Quizer\\src\\Core\\Core.csproj": {
+    "C:\\Users\\alesk\\source\\repos\\QuizApp\\src\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Asus\\source\\repos\\Quizer\\src\\Core\\Core.csproj",
+        "projectUniqueName": "C:\\Users\\alesk\\source\\repos\\QuizApp\\src\\Core\\Core.csproj",
         "projectName": "Core",
-        "projectPath": "C:\\Users\\Asus\\source\\repos\\Quizer\\src\\Core\\Core.csproj",
-        "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Asus\\source\\repos\\Quizer\\src\\Core\\obj\\",
+        "projectPath": "C:\\Users\\alesk\\source\\repos\\QuizApp\\src\\Core\\Core.csproj",
+        "packagesPath": "C:\\Users\\alesk\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\alesk\\source\\repos\\QuizApp\\src\\Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\alesk\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -87,8 +93,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Asus\\source\\repos\\Quizer\\src\\Models\\Models.csproj": {
-                "projectPath": "C:\\Users\\Asus\\source\\repos\\Quizer\\src\\Models\\Models.csproj"
+              "C:\\Users\\alesk\\source\\repos\\QuizApp\\src\\Models\\Models.csproj": {
+                "projectPath": "C:\\Users\\alesk\\source\\repos\\QuizApp\\src\\Models\\Models.csproj"
               }
             }
           }
@@ -106,6 +112,10 @@
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[7.0.9, )"
+            },
+            "System.Linq.Dynamic.Core": {
+              "target": "Package",
+              "version": "[1.3.7, )"
             }
           },
           "imports": [
@@ -124,21 +134,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Asus\\source\\repos\\Quizer\\src\\DataAccess\\DataAccess.csproj": {
+    "C:\\Users\\alesk\\source\\repos\\QuizApp\\src\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Asus\\source\\repos\\Quizer\\src\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\alesk\\source\\repos\\QuizApp\\src\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "C:\\Users\\Asus\\source\\repos\\Quizer\\src\\DataAccess\\DataAccess.csproj",
-        "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Asus\\source\\repos\\Quizer\\src\\DataAccess\\obj\\",
+        "projectPath": "C:\\Users\\alesk\\source\\repos\\QuizApp\\src\\DataAccess\\DataAccess.csproj",
+        "packagesPath": "C:\\Users\\alesk\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\alesk\\source\\repos\\QuizApp\\src\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\alesk\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -152,8 +162,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Asus\\source\\repos\\Quizer\\src\\Core\\Core.csproj": {
-                "projectPath": "C:\\Users\\Asus\\source\\repos\\Quizer\\src\\Core\\Core.csproj"
+              "C:\\Users\\alesk\\source\\repos\\QuizApp\\src\\Core\\Core.csproj": {
+                "projectPath": "C:\\Users\\alesk\\source\\repos\\QuizApp\\src\\Core\\Core.csproj"
               }
             }
           }
@@ -201,21 +211,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Asus\\source\\repos\\Quizer\\src\\Models\\Models.csproj": {
+    "C:\\Users\\alesk\\source\\repos\\QuizApp\\src\\Models\\Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Asus\\source\\repos\\Quizer\\src\\Models\\Models.csproj",
+        "projectUniqueName": "C:\\Users\\alesk\\source\\repos\\QuizApp\\src\\Models\\Models.csproj",
         "projectName": "Models",
-        "projectPath": "C:\\Users\\Asus\\source\\repos\\Quizer\\src\\Models\\Models.csproj",
-        "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Asus\\source\\repos\\Quizer\\src\\Models\\obj\\",
+        "projectPath": "C:\\Users\\alesk\\source\\repos\\QuizApp\\src\\Models\\Models.csproj",
+        "packagesPath": "C:\\Users\\alesk\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\alesk\\source\\repos\\QuizApp\\src\\Models\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\alesk\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -256,7 +266,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

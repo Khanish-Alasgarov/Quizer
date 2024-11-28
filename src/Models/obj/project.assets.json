@@ -8,19 +8,19 @@
     "net7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Asus\\.nuget\\packages\\": {}
+    "C:\\Users\\alesk\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Asus\\source\\repos\\Quizer\\src\\Models\\Models.csproj",
+      "projectUniqueName": "C:\\Users\\alesk\\source\\repos\\QuizApp\\src\\Models\\Models.csproj",
       "projectName": "Models",
-      "projectPath": "C:\\Users\\Asus\\source\\repos\\Quizer\\src\\Models\\Models.csproj",
-      "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Asus\\source\\repos\\Quizer\\src\\Models\\obj\\",
+      "projectPath": "C:\\Users\\alesk\\source\\repos\\QuizApp\\src\\Models\\Models.csproj",
+      "packagesPath": "C:\\Users\\alesk\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\alesk\\source\\repos\\QuizApp\\src\\Models\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\alesk\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -61,7 +61,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

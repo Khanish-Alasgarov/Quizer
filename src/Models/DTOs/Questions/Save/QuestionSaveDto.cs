@@ -6,5 +6,5 @@ public class QuestionSaveDto
     public string Text { get; set; }
     public byte Point { get; set; }
     public Guid QuestionSetId { get; set; }
-    public Guid CorrectAnswerId { get; set; }
+    public Guid? CorrectAnswerId { get; set; }
 }

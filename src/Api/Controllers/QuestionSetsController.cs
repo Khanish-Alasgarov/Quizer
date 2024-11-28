@@ -1,6 +1,7 @@
 ﻿using Core.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Models.Common;
 using Models.DTOs.QuestionSets.Create;
 
 namespace Api.Controllers
@@ -17,7 +18,12 @@ namespace Api.Controllers
         public IActionResult Create(QuestionSetCreateDto dto)
         {
             var response = _questionSetService.Create(dto);
-            return Created("",response);
+            return Created("",ApiResponse.Success(response));
+        }
+        [HttpGet]
+        public IActionResult GetAll()
+        {
+            return Ok(ApiResponse.Success(_questionSetService.GetAll()));
         }
     }
 }

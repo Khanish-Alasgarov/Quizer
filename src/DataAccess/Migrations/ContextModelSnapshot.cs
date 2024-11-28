@@ -110,7 +110,7 @@ namespace DataAccess.Migrations
 
                     b.HasIndex("QuestionSetId");
 
-                    b.ToTable("Session", (string)null);
+                    b.ToTable("Session");
                 });
 
             modelBuilder.Entity("Models.Entities.SessionContent", b =>
@@ -139,7 +139,7 @@ namespace DataAccess.Migrations
 
                     b.HasIndex("SubscriberId");
 
-                    b.ToTable("SessionContent", (string)null);
+                    b.ToTable("SessionContent");
                 });
 
             modelBuilder.Entity("Models.Entities.Subscriber", b =>
@@ -163,7 +163,7 @@ namespace DataAccess.Migrations
                     b.HasIndex("Email")
                         .IsUnique();
 
-                    b.ToTable("Subscriber", (string)null);
+                    b.ToTable("Subscriber");
                 });
 
             modelBuilder.Entity("Models.Entities.Answer", b =>
